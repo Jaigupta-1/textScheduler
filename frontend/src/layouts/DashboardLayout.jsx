@@ -10,8 +10,8 @@ const DashboardLayout = () => {
     <Outlet /> */}
       <SidebarProvider>
         <AppSidebar />
-        <div className="p-4  w-full h-screen">
-          <SidebarTrigger className={"sm:hidden "} />
+        <div className="w-full h-screen">
+          <SidebarTrigger className={"md:hidden "} />
           <Outlet />
         </div>
       </SidebarProvider>

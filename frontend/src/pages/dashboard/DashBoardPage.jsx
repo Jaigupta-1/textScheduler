@@ -9,7 +9,7 @@ const Icon = ({ component, bgColor }) => {
 }
 const DashBoardPage = () => {
   return (
-    <div className="bg-[#051321] text-white space-y-8">
+    <div className="bg-[#051321] text-white space-y-7 p-5">
       <div className="flex justify-between">
         <div>
           <h2 className="text-xl font-semibold">Dashboard</h2>
@@ -65,10 +65,13 @@ const DashBoardPage = () => {
           </div>
         </div>
       </div>
-      <div className="border border-white/30 rounded-lg space-y-5">
-        <div className="flex justify-between">
+      <div className="border border-white/30 rounded-lg">
+        <div className="flex justify-between px-5 py-3.5">
           <h2 className="font-semibold text-lg">Recent Schedules</h2>
           <button className="text-[#5236e0]">View all</button>
+        </div>
+        <div>
+          <TableDemo/>
         </div>
       </div>
     </div>
@@ -76,3 +79,87 @@ const DashBoardPage = () => {
 };
 
 export default DashBoardPage;
+
+
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableFooter,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table"
+
+const invoices = [
+  {
+    Message: "INV001",
+    Platform: "Paid",
+    SchedulesTime: "$250.00",
+    Status: "Credit Card",
+  },
+  {
+    Message: "INV001",
+    Platform: "Paid",
+    SchedulesTime: "$250.00",
+    Status: "Credit Card",
+  },
+  {
+    Message: "INV001",
+    Platform: "Paid",
+    SchedulesTime: "$250.00",
+    Status: "Credit Card",
+  },
+  {
+    Message: "INV001",
+    Platform: "Paid",
+    SchedulesTime: "$250.00",
+    Status: "Credit Card",
+  },
+  {
+    Message: "INV001",
+    Platform: "Paid",
+    SchedulesTime: "$250.00",
+    Status: "Credit Card",
+  },
+  {
+    Message: "INV001",
+    Platform: "Paid",
+    SchedulesTime: "$250.00",
+    Status: "Credit Card",
+  }
+]
+
+function TableDemo() {
+  return (
+    <Table className={""}>
+      {/* <TableCaption>A list of your recent invoices.</TableCaption> */}
+      <TableHeader>
+        <TableRow className="text-white">
+          <TableHead className="w-[100px]">Message</TableHead>
+          <TableHead>Platform</TableHead>
+          <TableHead>Schedule Time</TableHead>
+          <TableHead className="text-right">Status</TableHead>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        {invoices.map((invoice) => (
+          <TableRow key={invoice.Message}>
+            <TableCell className="font-medium">{invoice.Message}</TableCell>
+            <TableCell>{invoice.Platform}</TableCell>
+            <TableCell>{invoice.SchedulesTime}</TableCell>
+            <TableCell className="text-right">{invoice.Status}</TableCell>
+          </TableRow>
+        ))}
+      </TableBody>
+      {/* <TableFooter>
+        <TableRow>
+          <TableCell colSpan={3}>Total</TableCell>
+          <TableCell className="text-right">$2,500.00</TableCell>
+        </TableRow>
+      </TableFooter> */}
+    </Table>
+  )
+}
+
