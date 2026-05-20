@@ -25,7 +25,7 @@ const router = createBrowserRouter([
         element: <CreateSchedulePage />,
       },
       {
-        path: "calander",
+        path: "calender",
         element: <CalendarPage />,
       },
       {
