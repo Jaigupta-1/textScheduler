@@ -73,7 +73,7 @@ const items = [
   {
     title: "Settings",
     icon: Settings,
-    route: "",
+    route: "settings",
   },
 ];
 
