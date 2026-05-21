@@ -7,6 +7,7 @@ import CalendarPage from "../../pages/calendar/CalendarPage";
 import TemplatesPage from "../../pages/templates/TemplatesPage";
 import ContactsPage from "../../pages/contacts/ContactsPage";
 import LogsPage from "../../pages/logs/LogsPage";
+import SettingsPage from "@/pages/settings/SettingsPage";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
       {
         path: "logs",
         element: <LogsPage />,
+      },
+      {
+        path: "settings",
+        element: <SettingsPage />,
       },
     ],
   },
