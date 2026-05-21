@@ -124,6 +124,8 @@ const invoices = [
   },
 ];
 import Icon from "@/components/shared/Icon";
+import { DatePicker } from "@/components/ui/DatePicker";
+import { ComboboxPicker } from "@/components/ui/ComboxPicker";
 const buttons = [
   {
     icon: <Mail />,
@@ -150,7 +152,7 @@ const CreateSchedulePage = () => {
         <div>
           <h2 className="text-xl font-semibold">Create New Schedule</h2>
           <h5 className="text-sm opacity-80">
-            Overview of your scheduled messsages
+            Fill in the details to schedule a new message
           </h5>
         </div>
         <div className="flex gap-3 items-center">
@@ -162,10 +164,10 @@ const CreateSchedulePage = () => {
         </div>
       </div>
       {/* from div */}
-      <div className="p-2 flex gap-3 w-full ">
+      <div className=" flex gap-7 w-full ">
         {/* schedule form */}
         {/* bg-[#0c1b2b] */}
-        <div className="border flex-2 bg-red-500 p-2 rounded-md shadow-2xl">
+        <div className="border flex-2  py-3  px-6 rounded-md shadow-2xl flex flex-col space-y-3">
           {/* button */}
           <div className="">
             <p>Platform</p>
@@ -178,12 +180,12 @@ const CreateSchedulePage = () => {
           </div>
           <div className="">
             <p>Message</p>
-            <textarea className="bg-green-400 w-full h-40 rounded" />
+            <textarea className="border w-full h-40 rounded" />
           </div>
           <div className="">
             <p>Contact / Group</p>
             <div className="flex gap-1.5">
-              <InputGroup className="[--radius:1rem]">
+              <InputGroup className="rounded-sm">
                 <InputGroupInput placeholder="Enter search query" />
                 <InputGroupAddon align="inline-end">
                   <DropdownMenu>
@@ -213,10 +215,22 @@ const CreateSchedulePage = () => {
           </div>
           <div className="">
             <p>Schedule Date & Time</p>
-            <div className=""></div>
+            <div className="">
+              <DatePicker />
+            </div>
           </div>
-          <div className=""></div>
-          <div className=""></div>
+          <div className="">
+            <p>Repeat</p>
+            <div className="">
+              <ComboboxPicker />
+            </div>
+          </div>
+          <div className="text-end space-x-3">
+            <Button className={"bg-transparent border border-gray-500/50"}>
+              Save as Draft
+            </Button>
+            <Button className={"bg-blue-800"}>Schedule Message</Button>
+          </div>
         </div>
         {/* schedule message preview */}
         <div className="border-2 flex-1"></div>
