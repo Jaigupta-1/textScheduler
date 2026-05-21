@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import Icon from "../../components/shared/Icon";
 import { Input } from '@/components/ui/input';
-import { Plus,Bell,Settings,Search,Funnel,ChevronDown } from 'lucide-react';
+import { Plus,Bell,Settings,Search,Funnel,ChevronLeft,ChevronRight } from 'lucide-react';
 import DateRangePicker from '@/components/shared/DatePicker';
 import {
   Table,
@@ -158,12 +158,20 @@ function TableDemo() {
           </TableRow>
         ))}
       </TableBody>
-      {/* <TableFooter>
-        <TableRow>
-          <TableCell colSpan={3}>Total</TableCell>
-          <TableCell className="text-right">$2,500.00</TableCell>
+      <TableFooter >
+        <TableRow className={"bg-[#051321] hover:bg-transparent"}>
+          <TableCell colSpan={3}>Showing 1 to 10 of 128 results</TableCell>
+          <TableCell className={"flex items-center gap-2 "}>
+            <button className='p-1 hover:bg-muted/50'><ChevronLeft/></button>
+            <button className='p-1 hover:bg-muted/50'>1</button>
+            <button className='p-1 hover:bg-muted/50'>2</button>
+            <button className='p-1 hover:bg-muted/50'>3</button>
+            <button className='p-1 hover:bg-muted/50'>4</button>
+            <button className='p-1 hover:bg-muted/50'>5</button>
+            <button className='p-1 hover:bg-muted/50'><ChevronRight/></button>
+          </TableCell>
         </TableRow>
-      </TableFooter> */}
+      </TableFooter>
     </Table>
   )
 }
