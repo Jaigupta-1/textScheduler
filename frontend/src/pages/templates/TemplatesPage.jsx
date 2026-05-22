@@ -22,7 +22,7 @@ const TemplatesPage = () => {
       </div>
       {/* from div */}
       <div className="bg-[#051321] min-h-[85vh] ">
-        <div className="w-full flex flex-wrap justify-between gap-5">
+        <div className="w-full flex flex-wrap justify-between gap-4 ">
           {[1, 2, 3, 1, 2, 3, 42, 3, 2, 7, 8, 9, 1, 2, 3].map((i) => (
             <div
               key={i}
