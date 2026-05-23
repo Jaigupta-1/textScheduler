@@ -33,9 +33,11 @@ const DashBoardPage = () => {
         </div>
       </div>
       {/* card div */}
-      <div className="flex gap-3 h-[20%]">
-        {/*card1  */}
-        <div className="w-1/4 border border-white/30  rounded-xl bg-[#0c1b2b] shadow-2xl p-4 flex items-center">
+      {/* <div className="flex gap-3 flex-wrap"> */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  lg:grid-cols-4 gap-3">
+        {/*card1   w-[257px] */}
+
+        <div className="w-full  border border-white/30  rounded-xl bg-[#0c1b2b] shadow-2xl p-4 flex items-center">
           <div className="flex gap-3">
             <div className="p-1 ">
               <div className="bg-[#5236e0]/80 rounded-lg border-white/30 border shadow-2xl p-2 overflow-hidden">
@@ -52,7 +54,7 @@ const DashBoardPage = () => {
           </div>
         </div>
         {/*card2  */}
-        <div className="w-1/4 border border-white/30  rounded-xl bg-[#0c1b2b] shadow-2xl p-4 flex items-center">
+        <div className="w-full  md: border border-white/30  rounded-xl bg-[#0c1b2b] shadow-2xl p-4 flex items-center">
           <div className="flex gap-3">
             <div className="p-1 ">
               <div className="bg-amber-600/20 rounded-lg border-white/30 border shadow-2xl p-2 overflow-hidden">
@@ -69,7 +71,7 @@ const DashBoardPage = () => {
           </div>
         </div>
         {/*card3  */}
-        <div className="w-1/4 border border-white/30  rounded-xl bg-[#0c1b2b] shadow-2xl p-4 flex items-center">
+        <div className="w-full  border border-white/30  rounded-xl bg-[#0c1b2b] shadow-2xl p-4 flex items-center">
           <div className="flex gap-3">
             <div className="p-1 ">
               <div className="bg-green-600/20 rounded-lg border-white/30 border shadow-2xl p-2 overflow-hidden">
@@ -89,7 +91,7 @@ const DashBoardPage = () => {
           </div>
         </div>
         {/*card4  */}
-        <div className="w-1/4 border border-white/30  rounded-xl bg-[#0c1b2b] shadow-2xl p-4 flex items-center">
+        <div className="w-full  border border-white/30  rounded-xl bg-[#0c1b2b] shadow-2xl p-4 flex items-center">
           <div className="flex gap-3">
             <div className="p-1 ">
               <div className="bg-red-600/20 rounded-lg border-white/30 border shadow-2xl p-2 overflow-hidden">
@@ -108,7 +110,7 @@ const DashBoardPage = () => {
         </div>
       </div>
       {/* Table */}
-      <div className=" h-[65%]  shadow-2xl flex items-center">
+      <div className="min-h-[65%]  shadow-2xl flex items-center">
         <div className="bg-[#0c1b2b] w-full h-[93%] border border-white/30 rounded-lg">
           <div className="flex justify-between h-[15%] px-5 items-center">
             <h2 className="font-semibold text-lg">Recent Schedules</h2>
@@ -151,9 +153,7 @@ const DashBoardPage = () => {
             </TableBody>
             <TableFooter className={""}>
               <TableRow>
-                <TableCell colspan="4" className={"pl-5  "}>
-                 
-                </TableCell>
+                <TableCell colspan="4" className={"pl-5  "}></TableCell>
               </TableRow>
             </TableFooter>
           </Table>
