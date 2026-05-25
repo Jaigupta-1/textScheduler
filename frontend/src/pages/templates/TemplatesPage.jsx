@@ -22,17 +22,19 @@ const TemplatesPage = () => {
       </div>
       {/* from div */}
       <div className="bg-[#051321] min-h-[85vh] ">
-        <div className=" flex flex-wrap  gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {[1, 2, 3, 1, 2, 3, 42, 3, 2, 7, 8, 9, 1, 2, 3].map((i) => (
             <div
               key={i}
-              className="w-full lg:max-w-[337px] min-h-[250px] border border-gray-500 rounded-sm py-4 px-3  flex flex-col justify-between"
+              className="w-full  min-h-[250px] border border-gray-500 rounded-sm py-4 px-3  flex flex-col justify-between"
             >
               <div>Birthday Wish</div>
 
               <div>Happy Birthday 🎉</div>
 
-              <div>May your birthday bring happiness and success.</div>
+              <div className="text-xs font-semibold tracking-widerng-">
+                May your birthday bring happiness and success.
+              </div>
 
               <div className="flex gap-2">
                 <Button>

@@ -34,7 +34,7 @@ const DashBoardPage = () => {
       </div>
       {/* card div */}
       {/* <div className="flex gap-3 flex-wrap"> */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  lg:grid-cols-4 gap-3">
+      <div className="grid grid-cols-2 lg:grid-cols-4  gap-3">
         {/*card1   w-[257px] */}
 
         <div className="w-full  border border-white/30  rounded-xl bg-[#0c1b2b] shadow-2xl p-4 flex items-center">
