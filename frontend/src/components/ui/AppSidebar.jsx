@@ -63,7 +63,7 @@ const items = [
   {
     title: "Analytics",
     icon: ChartNoAxesCombined,
-    route: "",
+    route: "analytics",
   },
   {
     title: "Logs",
