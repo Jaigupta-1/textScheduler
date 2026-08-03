@@ -8,6 +8,7 @@ import TemplatesPage from "../../pages/templates/TemplatesPage";
 import ContactsPage from "../../pages/contacts/ContactsPage";
 import LogsPage from "../../pages/logs/LogsPage";
 import SettingsPage from "@/pages/settings/SettingsPage";
+import AnalyticsPage from "@/pages/analytics/AnalyticsPage";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: "logs",
         element: <LogsPage />,
+      },
+      {
+        path: "analytics",
+        element: <AnalyticsPage />,
       },
       {
         path: "settings",
